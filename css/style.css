@@ -63,6 +63,9 @@ header {
     padding: 100px 0 120px;
 }
 .about_intro {
+    position: relative;
+    margin-bottom: 50px;
+    max-width: 620px;
 }
 .about h1 {
     font-family: 'Open Sans';
@@ -78,7 +81,6 @@ header {
     letter-spacing: 6.5px;
 }
 .about_text {
-    max-width: 540px;
     margin-bottom: 50px;
 }
 .contact_button {
@@ -87,8 +89,6 @@ header {
     color: #fff;
     border-radius: 5px;
     padding: 15px 60px;
-}
-.about_video {
 }
 .about_video img{
     width: 550px;
@@ -108,6 +108,7 @@ header {
 .services_info {
     flex: 1 1 520px;
     max-width: 520px;
+    margin-bottom: 25px;
 }
 .services_head {
     text-transform: uppercase;
@@ -136,6 +137,9 @@ header {
     max-width: 220px;
     margin: 20px;
 }
+.service_head::before {
+    display: block;
+}
 .manage::before {
     content: url('../images/service-1.png');
 }
@@ -153,6 +157,7 @@ header {
     max-width: 1249px;
     margin: auto;
     text-align: center;
+    margin-bottom: 100px;
 }
 .feature_head h2 {
     text-transform: uppercase;
@@ -163,11 +168,29 @@ header {
     max-width: 540px;
     margin: 30px auto 0;
 }
-.feature_head hr {
+.red_line    {
     max-width: 134px;
     height: 2px;
     margin: 30px auto 0;
     background-color: #FF2D2D;
+    margin-bottom: 80px;
+}
+.feature_filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.feature li a {
+    padding: 50px 30px;
+    font-size: 22px;
+    color: #000;
+}
+.feature li a:hover {
+    color: #FF2D2D;
 }
 .feature_items {
     display: grid;
@@ -185,15 +208,62 @@ header {
 
  /* subscribe */
 .subscribe {
-    width: 1249px;
     margin: 0 auto;
+    padding: 100px 0;
     text-align: center;
+    background-color: #000;
+    opacity: 0.8;
+}
+.subscribe_head {
+    font-size: 42px;
+    color: #fff;
+    margin: 20px 0;
+}
+.subscribe_text {
+    color: #fff;
+    margin: 10px 0;
+}
+.subscribe_form {
+    margin: 30px 0;
+}
+.subscribe_form input {
+    padding: 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 30%;
+}
+.subscribe_form button {
+    font-size: 18px;
+    background-color: #FF2D2D;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+    padding: 30px;
+    margin-left: 20px;
+    text-transform: uppercase;
 }
 
 /* feedback */
 .feedback {
     width: 1249px;
-    margin: 0 auto;
+    margin: 100px auto;
+}
+.feedback_message {
+    width: 62%;
+}
+.feedback_message_head {
+    font-size: 42px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 30px 0;
+}
+.feedback_message_text {
+    font-size: 16px;
+    line-height: 28px;
+}
+.feedback .red_line {
+    margin: 50px 0;
+
 }
 
 /* JS */
@@ -205,4 +275,17 @@ header {
 }
 .visible {
     display: block;
+}
+
+
+@media screen and (max-width: 1260px) {
+    .about_wrapper {
+        flex-wrap: wrap;
+    }
+    .feature_items {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 20px;
+        grid-auto-rows: 300px;
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
 }
