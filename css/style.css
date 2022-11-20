@@ -366,6 +366,20 @@ header {
     background-color: #2D2D2D;
 }
 
+/* footer */
+.footer{
+    background-color: #2D2D2D;
+}
+.footer__content {
+    display: flex;
+    max-width: 1249px;
+    margin: 50px auto 0;
+    padding: 25px 0;
+}
+.footer__copyright {
+    color: #B8B8B8;
+}
+
 /* JS */
 .popup {
     width: 300px;
