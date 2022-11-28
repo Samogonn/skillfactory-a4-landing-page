@@ -13,6 +13,14 @@
     src: url(../fonts/OpenSans-ExtraBold.ttf);
     font-weight: 800;
 }
+
+@font-face {
+    font-family: 'Open Sans Italic';
+    src: url(../fonts/OpenSans-Italic.ttf);
+    font-weight: 400;
+    font-style: italic;
+}
+
 * {
     margin: 0;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
@@ -236,11 +244,27 @@ header {
     background-color: #eb6d4a8f;
 	width: 321px;
 	height: 458px;
-
+    margin-right: 40px;
 }
 .team__boss__about {
     grid-column: 2/4;
     grid-row: 1/2;
+}
+.boss__name {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.boss__about {
+    margin-top: 30px;
+    font-size: 16px;
+}
+.boss__links {
+    margin-top: 70px;
+    font-style: italic;
+    font-size: 18px;
+}
+.boss__links a {
+    margin-right: 40px;
 }
 .team__members {
     grid-column: 2/4;
@@ -248,6 +272,10 @@ header {
     display: flex;
     flex-wrap: wrap;
 }
+.team__member {
+    margin-right: 20px;
+}
+
 
  /* subscribe */
 .subscribe {
@@ -362,7 +390,7 @@ header {
 }
 .feedback__right-box {
     flex: 1 1 auto;
-    min-height: 400px;
+    min-height: 382px;
     background-color: #2D2D2D;
 }
 
@@ -372,12 +400,16 @@ header {
 }
 .footer__content {
     display: flex;
+    justify-content: space-between;
     max-width: 1249px;
     margin: 50px auto 0;
     padding: 25px 0;
 }
 .footer__copyright {
     color: #B8B8B8;
+}
+.footer__social a {
+    margin-right: 20px;
 }
 
 /* JS */
